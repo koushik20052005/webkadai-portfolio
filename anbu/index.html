@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anbu Chettinad Kitchen — Authentic Chettinad Restaurant, Mylapore Chennai</title>
+<meta name="description" content="Authentic Chettinad flavours in the heart of Mylapore, Chennai. Fire, spice and tradition since 1998.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14110b; --coal:#1d1811; --cream:#faf5ea; --sand:#f0e4cc;
+  --gold:#c9a24b; --gold-2:#e9c877; --rust:#a63d2f; --muted:#8d8676;
+  --radius:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,.serif{font-family:'Playfair Display',Georgia,serif;line-height:1.15}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold)}
+.eyebrow::before{content:"";width:34px;height:2px;background:var(--gold)}
+.sec{padding:96px 0}
+.sec h2{font-size:clamp(2rem,4.5vw,3.1rem);margin:14px 0 10px}
+.sec .lede{color:var(--muted);max-width:560px;font-size:1.06rem}
+
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:.35s;padding:20px 0}
+nav.scrolled{background:rgba(20,17,11,.92);backdrop-filter:blur(12px);padding:12px 0;box-shadow:0 8px 30px rgba(0,0,0,.25)}
+.nav-in{display:flex;align-items:center;justify-content:space-between}
+.brand{color:#fff;font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700}
+.brand span{color:var(--gold-2)}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{color:rgba(255,255,255,.85);font-size:.92rem;font-weight:500;transition:.25s}
+.nav-links a:hover{color:var(--gold-2)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:100px;font-weight:600;font-size:.95rem;transition:.3s;cursor:pointer;border:0}
+.btn-gold{background:linear-gradient(135deg,var(--gold-2),var(--gold));color:#241a08;box-shadow:0 10px 28px rgba(201,162,75,.35)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(201,162,75,.45)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.5);color:#fff;background:rgba(255,255,255,.06);backdrop-filter:blur(6px)}
+.btn-ghost:hover{border-color:var(--gold-2);color:var(--gold-2)}
+.btn-nav{padding:10px 22px;font-size:.88rem}
+@media(max-width:860px){.nav-links a:not(.btn){display:none}}
+
+/* hero */
+.hero{min-height:100svh;display:flex;align-items:flex-end;position:relative;color:#fff;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('../assets/hero.jpg') center/cover;transform:scale(1.06);animation:heroZoom 14s ease-out forwards}
+@keyframes heroZoom{to{transform:scale(1)}}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,8,5,.55) 0%,rgba(10,8,5,.15) 40%,rgba(10,8,5,.88) 100%)}
+.hero-in{position:relative;z-index:2;padding:120px 0 90px;width:100%}
+.hero-in .tamil{color:var(--gold-2);letter-spacing:6px;font-size:.85rem;font-weight:600;margin-bottom:14px}
+.hero h1{font-size:clamp(2.8rem,7.5vw,5.4rem);font-weight:700;max-width:12ch}
+.hero h1 em{font-style:italic;color:var(--gold-2)}
+.hero p{max-width:520px;color:rgba(255,255,255,.82);font-size:1.1rem;margin:20px 0 34px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero-meta{display:flex;gap:34px;margin-top:52px;flex-wrap:wrap}
+.hero-meta div b{display:block;font-family:'Playfair Display',serif;font-size:1.7rem;color:var(--gold-2)}
+.hero-meta div span{font-size:.82rem;color:rgba(255,255,255,.65);letter-spacing:1px;text-transform:uppercase}
+.scroll-hint{position:absolute;right:34px;bottom:34px;z-index:2;color:rgba(255,255,255,.6);font-size:.75rem;letter-spacing:3px;text-transform:uppercase;writing-mode:vertical-rl;display:flex;align-items:center;gap:12px}
+.scroll-hint::after{content:"";width:1px;height:56px;background:linear-gradient(var(--gold-2),transparent);animation:drip 2s infinite}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}55%{transform:scaleY(1);transform-origin:top}56%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+@media(max-width:640px){.scroll-hint{display:none}}
+
+/* marquee */
+.marquee{background:var(--gold);color:#241a08;overflow:hidden;white-space:nowrap;padding:15px 0;font-weight:700;letter-spacing:2px;font-size:.92rem;text-transform:uppercase}
+.marquee span{display:inline-block;padding:0 26px;animation:slide 26s linear infinite}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* signatures */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:52px}
+.card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 18px 45px rgba(20,17,11,.08);transition:.35s}
+.card:hover{transform:translateY(-8px);box-shadow:0 28px 60px rgba(20,17,11,.14)}
+.card .ph{height:230px;overflow:hidden}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.card:hover .ph img{transform:scale(1.07)}
+.card .tx{padding:26px}
+.card .tx .tag{font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--rust)}
+.card h3{font-size:1.45rem;margin:8px 0 6px}
+.card p{color:var(--muted);font-size:.94rem}
+.card .row{display:flex;justify-content:space-between;align-items:center;margin-top:16px}
+.price{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--ink)}
+.order{font-size:.85rem;font-weight:700;color:var(--gold);letter-spacing:1px}
+@media(max-width:860px){.cards{grid-template-columns:1fr}}
+
+/* story */
+.story{background:var(--coal);color:#fff}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.story .ph{border-radius:var(--radius);overflow:hidden;position:relative}
+.story .ph img{height:520px;width:100%;object-fit:cover}
+.story .ph::after{content:"";position:absolute;inset:0;border:1px solid rgba(233,200,119,.35);border-radius:var(--radius);transform:translate(16px,16px);pointer-events:none}
+.story h2{color:#fff}
+.story p{color:rgba(255,255,255,.72);margin:16px 0}
+.stats{display:flex;gap:40px;margin-top:34px}
+.stats b{display:block;font-family:'Playfair Display',serif;font-size:2rem;color:var(--gold-2)}
+.stats span{font-size:.8rem;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.55)}
+@media(max-width:860px){.story-grid{grid-template-columns:1fr}.story .ph img{height:340px}}
+
+/* menu */
+.menu-list{display:grid;grid-template-columns:1fr 1fr;gap:14px 60px;margin-top:48px}
+.mi{display:flex;align-items:baseline;gap:12px;padding:15px 0;border-bottom:1px dashed #d8c9a6}
+.mi .nm{font-weight:600}
+.mi .ds{font-size:.85rem;color:var(--muted);display:block;font-weight:400}
+.mi .dots{flex:1;border-bottom:2px dotted #d8c9a6;transform:translateY(-5px)}
+.mi .pr{font-family:'Playfair Display',serif;font-weight:700;font-size:1.15rem;color:var(--rust);white-space:nowrap}
+@media(max-width:700px){.menu-list{grid-template-columns:1fr}}
+.menu-note{margin-top:36px;text-align:center;color:var(--muted);font-size:.92rem}
+.menu-note a{color:var(--gold);font-weight:700}
+
+/* reviews */
+.reviews{background:var(--sand)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:52px}
+.rev{background:#fff;border-radius:var(--radius);padding:32px;box-shadow:0 14px 36px rgba(20,17,11,.06)}
+.rev .stars{color:var(--gold);letter-spacing:3px;margin-bottom:14px}
+.rev p{font-style:italic;color:#4a4438}
+.rev .who{margin-top:18px;font-weight:700;font-size:.9rem}
+.rev .who span{display:block;font-weight:400;color:var(--muted);font-size:.8rem}
+@media(max-width:860px){.rev-grid{grid-template-columns:1fr}}
+
+/* visit */
+.visit{background:var(--ink);color:#fff}
+.visit-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px}
+.vrow{display:flex;gap:18px;padding:20px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.vrow .ic{width:46px;height:46px;flex:0 0 46px;border-radius:50%;background:rgba(201,162,75,.14);display:flex;align-items:center;justify-content:center;font-size:1.2rem}
+.vrow b{display:block;margin-bottom:4px}
+.vrow p{color:rgba(255,255,255,.65);font-size:.94rem}
+.hours{background:rgba(255,255,255,.04);border:1px solid rgba(201,162,75,.25);border-radius:var(--radius);padding:34px}
+.hours h3{margin-bottom:18px;color:var(--gold-2)}
+.hrow{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px dashed rgba(255,255,255,.12);font-size:.94rem}
+.hrow:last-child{border:0}
+.hrow span:last-child{color:var(--gold-2);font-weight:600}
+@media(max-width:860px){.visit-grid{grid-template-columns:1fr}}
+
+/* footer */
+footer{background:#0d0b08;color:rgba(255,255,255,.55);padding:44px 0;font-size:.88rem}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.foot .demo{border:1px dashed rgba(201,162,75,.5);color:var(--gold-2);padding:8px 18px;border-radius:100px;font-size:.78rem;letter-spacing:1px}
+
+/* floating whatsapp */
+.wa{position:fixed;right:22px;bottom:22px;z-index:60;width:60px;height:60px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px rgba(37,211,102,.45);transition:.3s}
+.wa:hover{transform:scale(1.1)}
+.wa svg{width:30px;height:30px;fill:#fff}
+.wa::before{content:"";position:absolute;inset:0;border-radius:50%;background:#25d366;animation:ping 2.2s ease-out infinite;z-index:-1}
+@keyframes ping{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.7);opacity:0}}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s ease}
+.rv.on{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}.hero-bg{animation:none}}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#home">Anbu <span>Chettinad</span></a>
+    <div class="nav-links">
+      <a href="#signatures">Signatures</a>
+      <a href="#story">Our Story</a>
+      <a href="#menu">Menu</a>
+      <a href="#visit">Visit Us</a>
+      <a class="btn btn-gold btn-nav" href="https://wa.me/910000000000?text=Hi%20Anbu%20Chettinad!%20I%27d%20like%20to%20book%20a%20table.">Book a Table</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-shade"></div>
+  <div class="wrap hero-in">
+    <div class="tamil">அன்பு செட்டிநாடு &nbsp;•&nbsp; MYLAPORE, CHENNAI</div>
+    <h1>Where fire <em>meets</em> flavour.</h1>
+    <p>Authentic Chettinad recipes, stone-ground masalas and slow-cooked curries — served the way our grandmothers made them, in the heart of Mylapore.</p>
+    <div class="hero-cta">
+      <a class="btn btn-gold" href="#menu">Explore the Menu</a>
+      <a class="btn btn-ghost" href="https://wa.me/910000000000?text=Hi!%20I%27d%20like%20to%20place%20an%20order.">Order on WhatsApp</a>
+    </div>
+    <div class="hero-meta">
+      <div><b>27+</b><span>Years of legacy</span></div>
+      <div><b>4.8 ★</b><span>2,400+ reviews</span></div>
+      <div><b>40+</b><span>Dishes on menu</span></div>
+    </div>
+  </div>
+  <div class="scroll-hint">Scroll</div>
+</header>
+
+<div class="marquee"><span>Chettinad Chicken Curry &nbsp;✦&nbsp; Ghee Roast Dosa &nbsp;✦&nbsp; Elai Sappadu &nbsp;✦&nbsp; Mutton Chukka &nbsp;✦&nbsp; Paniyaram &nbsp;✦&nbsp; Filter Coffee &nbsp;✦&nbsp; Chettinad Chicken Curry &nbsp;✦&nbsp; Ghee Roast Dosa &nbsp;✦&nbsp; Elai Sappadu &nbsp;✦&nbsp; Mutton Chukka &nbsp;✦&nbsp; Paniyaram &nbsp;✦&nbsp; Filter Coffee &nbsp;✦&nbsp;</span></div>
+
+<section class="sec" id="signatures">
+  <div class="wrap">
+    <span class="eyebrow rv">Chef's Signatures</span>
+    <h2 class="rv">Dishes people cross the city for</h2>
+    <p class="lede rv">Three legends from our kitchen. Everything is made fresh through the day — when it's over, it's over.</p>
+    <div class="cards">
+      <article class="card rv">
+        <div class="ph"><img src="../assets/hero.jpg" alt="Chettinad chicken curry in a brass bowl"></div>
+        <div class="tx">
+          <span class="tag">Most Loved</span>
+          <h3>Chettinad Chicken Curry</h3>
+          <p>Slow-cooked with 14 stone-ground spices, finished with curry leaves tempered in gingelly oil.</p>
+          <div class="row"><span class="price">₹320</span><a class="order" href="https://wa.me/910000000000?text=I%27d%20like%20to%20order%20Chettinad%20Chicken%20Curry">ORDER →</a></div>
+        </div>
+      </article>
+      <article class="card rv">
+        <div class="ph"><img src="../assets/dosa.jpg" alt="Crispy ghee roast dosa on banana leaf"></div>
+        <div class="tx">
+          <span class="tag">Breakfast Legend</span>
+          <h3>Ghee Roast Dosa</h3>
+          <p>Golden, crisp, roasted in pure ghee. Served with coconut chutney and piping-hot sambar.</p>
+          <div class="row"><span class="price">₹120</span><a class="order" href="https://wa.me/910000000000?text=I%27d%20like%20to%20order%20Ghee%20Roast%20Dosa">ORDER →</a></div>
+        </div>
+      </article>
+      <article class="card rv">
+        <div class="ph"><img src="../assets/meals.jpg" alt="Traditional banana leaf meals"></div>
+        <div class="tx">
+          <span class="tag">Sunday Special</span>
+          <h3>Elai Sappadu</h3>
+          <p>The full banana-leaf experience — rice, sambar, rasam, poriyal, appalam and payasam.</p>
+          <div class="row"><span class="price">₹220</span><a class="order" href="https://wa.me/910000000000?text=I%27d%20like%20to%20order%20Elai%20Sappadu">ORDER →</a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec story" id="story">
+  <div class="wrap story-grid">
+    <div class="ph rv"><img src="../assets/interior.jpg" alt="Warm dining hall of Anbu Chettinad Kitchen"></div>
+    <div class="rv">
+      <span class="eyebrow">Our Story</span>
+      <h2>Three generations, one wood-fired stove</h2>
+      <p>Anbu Chettinad Kitchen began in 1998 as a six-table eatery run by Paati Anbu herself. Her hand-pounded masalas and refusal to rush a curry built a following that outgrew the little shop in three years.</p>
+      <p>Today her grandchildren run the kitchen — same recipes, same fire, just more tables. Nothing here comes from a packet. Ever.</p>
+      <div class="stats">
+        <div><b>1998</b><span>Founded</span></div>
+        <div><b>14</b><span>House spices</span></div>
+        <div><b>0</b><span>Shortcuts taken</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="menu">
+  <div class="wrap">
+    <span class="eyebrow rv">The Menu</span>
+    <h2 class="rv">Made fresh, priced honest</h2>
+    <p class="lede rv">A taste of the full menu. Ask us on WhatsApp for today's specials.</p>
+    <div class="menu-list rv">
+      <div class="mi"><div><span class="nm">Chettinad Chicken Curry</span><span class="ds">14-spice, slow-cooked, bone-in</span></div><span class="dots"></span><span class="pr">₹320</span></div>
+      <div class="mi"><div><span class="nm">Mutton Chukka Varuval</span><span class="ds">Dry-roasted, pepper-heavy</span></div><span class="dots"></span><span class="pr">₹380</span></div>
+      <div class="mi"><div><span class="nm">Elai Sappadu</span><span class="ds">Full banana-leaf meals</span></div><span class="dots"></span><span class="pr">₹220</span></div>
+      <div class="mi"><div><span class="nm">Ghee Roast Dosa</span><span class="ds">Crisp, pure ghee</span></div><span class="dots"></span><span class="pr">₹120</span></div>
+      <div class="mi"><div><span class="nm">Kuzhi Paniyaram (8 pc)</span><span class="ds">With onion chutney</span></div><span class="dots"></span><span class="pr">₹99</span></div>
+      <div class="mi"><div><span class="nm">Chettinad Fish Curry</span><span class="ds">Tamarind, kodampuli</span></div><span class="dots"></span><span class="pr">₹340</span></div>
+      <div class="mi"><div><span class="nm">Kothu Parotta</span><span class="ds">Chopped fresh on the tawa</span></div><span class="dots"></span><span class="pr">₹160</span></div>
+      <div class="mi"><div><span class="nm">Filter Coffee</span><span class="ds">Dabara-set, strong</span></div><span class="dots"></span><span class="pr">₹40</span></div>
+    </div>
+    <p class="menu-note rv">Craving something? <a href="https://wa.me/910000000000?text=Hi!%20Please%20share%20today%27s%20specials.">WhatsApp us for today's specials →</a></p>
+  </div>
+</section>
+
+<section class="sec reviews" id="reviews">
+  <div class="wrap">
+    <span class="eyebrow rv">Word on the Street</span>
+    <h2 class="rv">4.8 stars, 2,400+ happy stomachs</h2>
+    <div class="rev-grid">
+      <div class="rev rv"><div class="stars">★★★★★</div><p>"The chicken curry tastes like my grandmother's — I don't say that lightly. The masala hits you in waves."</p><div class="who">Priya R.<span>Mylapore • Regular since 2019</span></div></div>
+      <div class="rev rv"><div class="stars">★★★★★</div><p>"Ordered Elai Sappadu for 30 people for my dad's 60th. On time, piping hot, zero complaints. Legends."</p><div class="who">Karthik S.<span>Adyar • Bulk order</span></div></div>
+      <div class="rev rv"><div class="stars">★★★★★</div><p>"That ghee roast shatters like glass. Best dosa in Chennai, and I will fight anyone on this."</p><div class="who">Deepa M.<span>Nungambakkam • Food blogger</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec visit" id="visit">
+  <div class="wrap">
+    <span class="eyebrow rv">Visit Us</span>
+    <h2 class="rv" style="color:#fff">Come hungry, leave happy</h2>
+    <div class="visit-grid" style="margin-top:48px">
+      <div class="rv">
+        <div class="vrow"><div class="ic">📍</div><div><b>Find us</b><p>42, North Mada Street, Mylapore,<br>Chennai 600 004</p></div></div>
+        <div class="vrow"><div class="ic">📞</div><div><b>Call us</b><p>+91 90000 00000<br>We take bulk &amp; party orders too</p></div></div>
+        <div class="vrow" style="border:0"><div class="ic">🛵</div><div><b>Delivery</b><p>Within 5 km on WhatsApp orders<br>Also on Swiggy &amp; Zomato</p></div></div>
+        <div style="display:flex;gap:14px;margin-top:28px;flex-wrap:wrap">
+          <a class="btn btn-gold" href="https://maps.google.com/?q=Mylapore+Chennai" target="_blank" rel="noopener">Get Directions</a>
+          <a class="btn btn-ghost" href="https://wa.me/910000000000?text=Hi!%20I%27d%20like%20to%20book%20a%20table.">Book on WhatsApp</a>
+        </div>
+      </div>
+      <div class="hours rv">
+        <h3>Opening Hours</h3>
+        <div class="hrow"><span>Mon – Fri</span><span>11:30 AM – 10:30 PM</span></div>
+        <div class="hrow"><span>Saturday</span><span>11:00 AM – 11:00 PM</span></div>
+        <div class="hrow"><span>Sunday</span><span>11:00 AM – 11:00 PM</span></div>
+        <div class="hrow"><span>Elai Sappadu</span><span>Sundays 12 – 3 PM only</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div>© <span id="yr"></span> Anbu Chettinad Kitchen · Mylapore, Chennai</div>
+    <div class="demo">SAMPLE DESIGN · by WebKadai</div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/910000000000?text=Hi%20Anbu%20Chettinad!" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 .8C7.6.8.8 7.6.8 16c0 2.7.7 5.3 2 7.6L.8 31.2l7.8-2c2.2 1.2 4.7 1.9 7.4 1.9 8.4 0 15.2-6.8 15.2-15.2S24.4.8 16 .8zm0 27.6c-2.3 0-4.6-.6-6.5-1.8l-.5-.3-4.6 1.2 1.2-4.5-.3-.5c-1.3-2-2-4.4-2-6.9 0-7 5.7-12.7 12.7-12.7S28.7 9 28.7 16 23 28.4 16 28.4zm7-9.5c-.4-.2-2.3-1.1-2.6-1.2-.4-.2-.6-.2-.9.2-.3.4-1 1.2-1.2 1.5-.2.2-.5.3-.8.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8.2-.2.4-.5.6-.7.2-.2.3-.4.4-.7.1-.2.1-.5 0-.7-.1-.2-.9-2.1-1.2-2.9-.3-.8-.6-.6-.9-.7h-.7c-.3 0-.7.1-1 .5-.4.4-1.3 1.3-1.3 3.1s1.3 3.6 1.5 3.9c.2.3 2.6 4 6.3 5.6.9.4 1.6.6 2.1.8.9.3 1.7.2 2.3.2.7-.1 2.3-.9 2.6-1.8.3-.9.3-1.7.2-1.8-.1-.2-.4-.3-.8-.5z"/></svg>
+</a>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+const nav = document.getElementById('nav');
+addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 40), {passive:true});
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), {threshold:.12});
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

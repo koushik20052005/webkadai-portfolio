@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design Preview — Anbu Chettinad Kitchen · WebKadai</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0e0c09;color:#f5efe2;font-family:system-ui,-apple-system,sans-serif;min-height:100vh;padding:48px 20px 70px}
+.head{max-width:1200px;margin:0 auto 46px;text-align:center}
+.head .kicker{color:#c9a24b;letter-spacing:4px;font-size:.75rem;font-weight:700;text-transform:uppercase}
+.head h1{font-family:Georgia,serif;font-size:clamp(1.8rem,4vw,2.8rem);margin:12px 0 8px}
+.head p{color:rgba(245,239,226,.6);max-width:560px;margin:0 auto}
+.head .live{margin-top:18px}
+.head .live a{color:#c9a24b;font-weight:600;border:1px solid rgba(201,162,75,.5);padding:10px 24px;border-radius:100px;display:inline-block}
+.stage{max-width:1240px;margin:0 auto;display:flex;gap:56px;justify-content:center;align-items:flex-start;flex-wrap:wrap}
+.dev{text-align:center}
+.dev .label{margin-top:22px;color:#c9a24b;letter-spacing:3px;font-size:.78rem;font-weight:700;text-transform:uppercase}
+.dev .sub{color:rgba(245,239,226,.45);font-size:.85rem;margin-top:6px}
+/* phone */
+.phone{width:340px;height:716px;background:#000;border-radius:52px;padding:14px;box-shadow:0 40px 90px rgba(0,0,0,.6),inset 0 0 0 2px #2a2a2a;position:relative}
+.phone::before{content:"";position:absolute;top:26px;left:50%;transform:translateX(-50%);width:112px;height:28px;background:#000;border-radius:20px;z-index:3}
+.phone iframe{width:100%;height:100%;border:0;border-radius:40px;background:#fff}
+.phone .btn{position:absolute;right:-3px;top:170px;width:3px;height:70px;background:#2a2a2a;border-radius:2px}
+/* laptop */
+.laptop{width:760px;max-width:100%}
+.screen{background:#000;border-radius:18px 18px 0 0;padding:12px 12px 0;box-shadow:0 40px 90px rgba(0,0,0,.6)}
+.screen .bar{display:flex;gap:7px;padding:4px 8px 12px}
+.screen .bar i{width:11px;height:11px;border-radius:50%;background:#3a3a3a}
+.screen .bar i:first-child{background:#c9a24b}
+.screen iframe{width:100%;height:520px;border:0;background:#fff;display:block}
+.base{height:16px;background:linear-gradient(#3d3a35,#1c1a17);border-radius:0 0 18px 18px;position:relative}
+.base::after{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:130px;height:7px;background:#0e0c09;border-radius:0 0 12px 12px}
+@media(max-width:820px){.laptop{transform:scale(.62);transform-origin:top center;margin-bottom:-200px}.stage{gap:10px}}
+@media(max-width:480px){.laptop{transform:scale(.44);margin-bottom:-290px}}
+.note{max-width:640px;margin:60px auto 0;text-align:center;color:rgba(245,239,226,.5);font-size:.88rem;border:1px dashed rgba(201,162,75,.4);border-radius:14px;padding:18px 22px}
+</style>
+</head>
+<body>
+<div class="head">
+  <div class="kicker">WebKadai · Sample Design Preview</div>
+  <h1>Anbu Chettinad Kitchen</h1>
+  <p>This is exactly how the website looks on a phone and on a laptop — it's the real site, live inside these frames. Scroll inside each device to explore.</p>
+  <div class="live"><a href="./anbu/index.html">Open the full site →</a></div>
+</div>
+<div class="stage">
+  <div class="dev">
+    <div class="phone"><span class="btn"></span><iframe src="./anbu/index.html" title="Phone preview" loading="lazy"></iframe></div>
+    <div class="label">📱 Phone</div><div class="sub">390px · mobile layout</div>
+  </div>
+  <div class="dev">
+    <div class="laptop">
+      <div class="screen"><div class="bar"><i></i><i></i><i></i></div><iframe src="./anbu/index.html" title="Laptop preview" loading="lazy"></iframe></div>
+      <div class="base"></div>
+    </div>
+    <div class="label">💻 Laptop</div><div class="sub">1280px · desktop layout</div>
+  </div>
+</div>
+<div class="note">Sample design concept by WebKadai. Business name, photos, menu and contact details are fictional placeholders.</div>
+</body>
+</html>
